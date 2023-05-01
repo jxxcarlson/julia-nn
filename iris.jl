@@ -41,7 +41,7 @@ optim = Flux.setup(Flux.Adam(0.01), model)
 
 # Train the network, showing progress
 losses = []
-@showprogress for epoch in 1:100
+@time @showprogress for epoch in 1:100
     for (x, y) in loader
         loss, grads = Flux.withgradient(model) do m
             # Evaluate model and loss inside gradient context:
