@@ -1,7 +1,6 @@
 # One layer neural network for the Iris data set
 
 using MLDatasets: Iris
-using Flux.Data: DataLoader
 using Flux
 using DataFrames
 using Random
@@ -10,8 +9,6 @@ using ProgressMeter
 dataset = Iris()
 # > length(dataset)
 # > dataset[1:2]
-# > dataset[1].features
-# > dataset[1].target
 
 
 # Extract the data, phase 1
